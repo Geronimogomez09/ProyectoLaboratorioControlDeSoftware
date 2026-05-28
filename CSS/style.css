@@ -70,6 +70,11 @@ header{
 }
 
 /* MENU */
+.menu{
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
 .menu button{
     background: none;
     border: none;
@@ -77,6 +82,12 @@ header{
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
+}
+.menu img{
+    align-items: center;
+    filter: brightness(0) invert(1);
+    height: 40px;
+    width: 40px;
 }
 
 /* LOGO */
@@ -94,12 +105,12 @@ header{
 /* ICONOS */
 .iconos{
     display: flex;
-    gap: 18px;
+    gap: 30px;
 }
 
 .iconos img{
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     filter: brightness(0) invert(1);
     cursor: pointer;
 }
@@ -225,4 +236,8 @@ header{
     .logo img{
         width: 110px;
     }
+}
+.top-bar menu img{
+    width: 40px;
+    height: 40px;
 }

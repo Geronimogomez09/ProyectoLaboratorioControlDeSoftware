@@ -298,14 +298,14 @@ header{
 /* TEXTO */
 
 .barra-anuncios span{
-    color: rgb(73, 73, 73);
+    color: rgb(124, 17, 17);
 
     font-size: 14px;
     font-weight: 600;
-
+font-family: var(--fuente2);
     padding-right: 120px;
 
-    animation: scrollTexto 12s linear infinite;
+    animation: scrollTexto 20s linear infinite;
 }
 
 /* ANIMACION */

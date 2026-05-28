@@ -25,9 +25,12 @@ body{
 /* HEADER GENERAL */
 header{
     width: 100%;
+
     display: flex;
-    justify-content: center;
-    margin-top: 25px;
+    flex-direction: column;
+
+    position: relative;
+
     margin-bottom: 90px;
 }
 
@@ -252,4 +255,60 @@ header{
 .top-bar menu img{
     width: 40px;
     height: 40px;
+}
+
+/* BARRA ANUNCIOS */
+
+.barra-anuncios{
+    width: 100%;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        inset 0 -1px 1px rgba(255,255,255,0.1);
+}
+
+/* CONTENEDOR QUE SE MUEVE */
+
+.barra-anuncios{
+    white-space: nowrap;
+}
+
+/* TEXTO */
+
+.barra-anuncios span{
+    color: rgb(73, 73, 73);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding-right: 120px;
+
+    animation: scrollTexto 12s linear infinite;
+}
+
+/* ANIMACION */
+
+@keyframes scrollTexto{
+
+    from{
+        transform: translateX(-100%);
+    }
+
+    to{
+        transform: translateX(100%);
+    }
 }

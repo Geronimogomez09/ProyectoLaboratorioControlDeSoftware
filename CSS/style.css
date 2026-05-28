@@ -13,7 +13,15 @@
     box-sizing: border-box;
     --fuente1: "brice-regular-semiexpanded", sans-serif;
     --fuente2: "tomorrow-bold", sans-serif;
-    
+    --azul: #263D69;
+    --azulClaro: #1C4694;
+    --dorado: #946E1C;
+    --marron: #614E26;
+    --azulOscuro: #212B3F;
+    --celeste: #B0CCFF;
+    --rosaClaro:#FFF0CF;
+    --piel:#FADA93;
+    --pielClaro: #FFEEC9;
 }
 
 body{

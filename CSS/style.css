@@ -1,8 +1,19 @@
+@font-face {
+    font-family: "brice-regular-semiexpanded";
+    src: url(../fonts/BriceRegularSemiExpanded.otf) format("opentype");
+}
+@font-face{
+    font-family: "Tomorrow-bold";
+    src: url(../fonts/Tomorrow-SemiBold.ttf) format("opentype");
+}
 /* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --fuente1: "brice-regular-semiexpanded", sans-serif;
+    --fuente2: "tomorrow-bold", sans-serif;
+    
 }
 
 body{
@@ -209,6 +220,7 @@ header{
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    font-family: var(--fuente2);
 }
 
 /* hover elegante */

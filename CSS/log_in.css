@@ -1,0 +1,126 @@
+ @font-face {
+    font-family: "brice-regular-semiexpanded";
+    src: url(../fonts/BriceRegularSemiExpanded.otf) format("opentype");
+}
+@font-face{
+    font-family: "Tomorrow-bold";
+    src: url(../fonts/Tomorrow-SemiBold.ttf) format("opentype");
+}
+:root{
+    --fuente1: "brice-regular-semiexpanded", sans-serif;
+    --fuente2: "tomorrow-bold", sans-serif;
+    --azul: #263D69;
+    --azulClaro: #1C4694;
+    --dorado: #946E1C;
+    --marron: #614E26;
+    --azulOscuro: #212B3F;
+    --celeste: #B0CCFF;
+    --rosaClaro:#FFF0CF;
+    --piel:#FADA93;
+    --pielClaro: #FFEEC9;
+    }
+
+ *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--fuente2);
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image:         linear-gradient(rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url("../images/barberiaDeFondo.png");
+            background-size: cover;
+            }
+
+        .login-container{
+            width: 420px;
+            padding: 35px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            animation: entrada 0.8s ease-out;
+        }
+
+        .login-container h2{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group{
+            margin-bottom: 15px;
+        }
+
+        .form-group label{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        .form-group input:focus{
+            border-color: #c1121f;
+            transition: 1s;
+        }
+
+        .btn-login{
+            width: 100%;
+            padding: 12px;
+            border: none;
+            background: #c1121f;
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.6s;
+        }
+
+        .btn-login:hover{
+            background: #a30f1a;
+            transform: translateY(-3px);
+        }
+
+        .extra-links{
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .extra-links a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.extra-links a:hover{
+    transform: scale(1.02);
+}
+        
+        @keyframes entrada{
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container{
+    animation: entrada 0.8s ease-out forwards;
+}

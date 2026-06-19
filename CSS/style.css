@@ -302,7 +302,7 @@ header{
 
     font-size: 14px;
     font-weight: 600;
-font-family: var(--fuente2);
+font-family: var(--azul);
     padding-right: 120px;
 
     animation: scrollTexto 20s linear infinite;

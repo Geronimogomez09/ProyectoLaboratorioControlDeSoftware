@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="CSS/carrito.css">
+    <link rel="stylesheet" href="CSS/base.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAISEN FADE - Carrito</title>
+    <link rel="icon" type="image/x-icon" href="images/logo-kaisenfade.png">
+</head>
+<body>
+    <header class="a">
+        <div class="barra-anuncios">
+            <span>Cortes gratis a partir de 1000$</span>
+            <span>Cortes gratis a partir de 1000$</span>
+            <span>Cortes gratis a partir de 1000$</span>
+        </div>
+        <div class="top-bar">
+            <div class="menu">
+                <button id="menu"><img src="images/icons/menu-principal.png" alt="Abrir menú"></button>
+            </div>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo-kaisenfade.png" alt="logoKAISENFADE"></a>
+            </div>
+            <div class="iconos">
+                <img src="images/icons/mapa.png" alt="iconoUbicacion">
+                <img src="images/icons/lupa.png" alt="iconoBuscador">
+                <a href="carrito.html" class="icono-carrito-wrap">
+                    <img src="images/icons/carrito-de-compras.png" alt="iconoCarrito">
+                    <span id="badge-carrito" class="badge-carrito oculto">0</span>
+                </a>
+                <a href="usuario.html"><img src="images/icons/avatar.png" alt="iconoUsuario"></a>
+            </div>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="turnos.html"><span>TURNOS</span></a></li>
+                    <li><a href="index.html"><span>INICIO</span></a></li>
+                    <li><a href="catalogo.html"><span>CATALOGO</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="menu-lateral" class="menu-lateral">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="turnos.html">Turnos</a></li>
+                <li><a href="usuario.html">Usuario</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><button id="close-menu">Cerrar menu</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <h1>TU CARRITO</h1>
+        </div>
+
+        <div class="carrito-contenedor">
+            <p id="carrito-vacio" class="oculto">Todavía no agregaste ningún producto.</p>
+
+            <!-- Acá se inyectan dinámicamente los productos con innerHTML -->
+            <div id="lista-carrito"></div>
+
+            <div id="resumen" class="resumen-carrito oculto">
+                Total: $<span id="total-carrito">0</span>
+            </div>
+
+            <div class="acciones-carrito">
+                <button id="btn-vaciar">Vaciar carrito</button>
+                <a href="catalogo.html"><button type="button">Seguir comprando</button></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="cont-footer">
+            <img src="images/logo-kaisenfade.png" alt="Logo de kaisen fade">
+            <p>&copy; 2024 KAISEN FADE. Todos los derechos reservados.</p>
+            <div class="redes">
+                <a href="https://www.facebook.com/kaisenfade" target="_blank"><img src="images/icons/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/kaisenfade" target="_blank"><img src="images/icons/logotipo-de-instagram.png" alt="Instagram"></a>
+                <a href="https://wa.me/1234567890" target="_blank"><img src="images/icons/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/menu.js" defer></script>
+    <script src="JS/carrito.js" defer></script>
+</body>
+</html>

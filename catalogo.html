@@ -1,60 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <link rel="stylesheet" href="CSS/catalogo.css">
+    <link rel="stylesheet" href="CSS/base.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAISEN FADE</title>
+    <title>KAISEN FADE - Catálogo</title>
     <link rel="icon" type="image/x-icon" href="images/logo-kaisenfade.png">
 </head>
 <body>
     <header class="a">
         <div class="barra-anuncios">
-            <span>Cortes gratis a partir de 1000$</span> 
-            <span>Cortes gratis a partir de 1000$</span> 
-            <span>Cortes gratis a partir de 1000$</span> 
-            <span>Cortes gratis a partir de 1000$</span> 
-            <span>Cortes gratis a partir de 1000$</span> 
             <span>Cortes gratis a partir de 1000$</span>
             <span>Cortes gratis a partir de 1000$</span>
-            <span>Cortes gratis a partir de 1000$</span>   
-
+            <span>Cortes gratis a partir de 1000$</span>
+            <span>Cortes gratis a partir de 1000$</span>
         </div>
         <div class="top-bar">
             <div class="menu">
-                <button id="menu"><img src="images/icons/menu-principal.png"></button>
+                <button id="menu"><img src="images/icons/menu-principal.png" alt="Abrir menú"></button>
             </div>
             <div class="logo">
-                        <img src="images/logo-kaisenfade.png" alt="logoKAISENFADE">
+                <a href="index.html"><img src="images/logo-kaisenfade.png" alt="logoKAISENFADE"></a>
             </div>
             <div class="iconos">
-                <img src="images/icons/mapa.png" alt="iconoUbicacion">
-                <img src="images/icons/lupa.png" alt="iconoBuscador">
-                <img src="images/icons/carrito-de-compras.png" alt="iconoCarrito">
-                <img src="images/icons/avatar.png" alt="iconoUsuario">
+                <img id="btn-mapa" src="images/icons/mapa.png" alt="iconoUbicacion">
+                <img id="btn-buscador" src="images/icons/lupa.png" alt="iconoBuscador">
+                <a href="carrito.html" class="icono-carrito-wrap">
+                    <img src="images/icons/carrito-de-compras.png" alt="iconoCarrito">
+                    <span id="badge-carrito" class="badge-carrito oculto">0</span>
+                </a>
+                <a href="usuario.html"><img src="images/icons/avatar.png" alt="iconoUsuario"></a>
             </div>
             <div class="nav-bar">
                 <ul>
-                    <li><span>SERVICIOS</span></li>
-                    <li><span>INICIO</span></li>
-                    <li><span>CATALOGO</span></li>
+                    <li><a href="turnos.html"><span>TURNOS</span></a></li>
+                    <li><a href="index.html"><span>INICIO</span></a></li>
+                    <li><a href="catalogo.html"><span>CATALOGO</span></a></li>
                 </ul>
-
             </div>
         </div>
+
+        <!-- Barra de búsqueda: arranca oculta y se muestra al hacer click en la lupa -->
+        <div id="buscador" class="buscador oculto">
+            <input type="text" id="buscador-input" placeholder="Buscar producto...">
+        </div>
+
         <div id="menu-lateral" class="menu-lateral">
             <ul>
-                
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Catálogo</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Ubicación</a></li>
-                <li><a href="#">Turnos</a></li>
-                <li><a href="#">Usuario</a></li>
-                <li><a href="#">Carrito</a></li>
-                <li>
-                    <button id="close-menu">Cerrar menu</button>
-                </li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="turnos.html">Turnos</a></li>
+                <li><a href="usuario.html">Usuario</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><button id="close-menu">Cerrar menu</button></li>
             </ul>
         </div>
     </header>
@@ -64,49 +63,44 @@
     </div>
             <div class="catalogo">
                 <div class="productos">
-                    <div class="producto">
+                    <div class="producto" data-nombre="Arcilla Mate" data-precio="5000">
                         <img src="images/products/arcilla-mate.png" alt="Arcilla Mate">
                         <h2>Arcilla Mate</h2>
-                    <p class="precio">$5000</p>
-                    <button class="btn-carrito">Agregar al Carrito</button>
+                        <p class="precio">$5000</p>
+                        <button class="btn-carrito" data-nombre="Arcilla Mate" data-precio="5000">Agregar al Carrito</button>
+                    </div>
+                    <div class="producto" data-nombre="Polvo de Texturizar" data-precio="6000">
+                        <img src="images/products/polvo-de-texturizar.png" alt="Polvo de Texturizar">
+                        <h2>Polvo de Texturizar</h2>
+                        <p class="precio">$6000</p>
+                        <button class="btn-carrito" data-nombre="Polvo de Texturizar" data-precio="6000">Agregar al Carrito</button>
+                    </div>
+                    <div class="producto" data-nombre="Creme Leave-In" data-precio="7000">
+                        <img src="images/products/crema-leave-in.png" alt="Creme Leave-In">
+                        <h2>Creme Leave-In</h2>
+                        <p class="precio">$7000</p>
+                        <button class="btn-carrito" data-nombre="Creme Leave-In" data-precio="7000">Agregar al Carrito</button>
+                    </div>
+                    <div class="producto" data-nombre="Sytiling Cream" data-precio="8000">
+                        <img src="images/products/sytiling-cream.png" alt="Sytiling Cream">
+                        <h2>Sytiling Cream</h2>
+                        <p class="precio">$8000</p>
+                        <button class="btn-carrito" data-nombre="Sytiling Cream" data-precio="8000">Agregar al Carrito</button>
+                    </div>
+                    <div class="producto" data-nombre="Shampoo Kaisen" data-precio="8000">
+                        <img src="images/products/shampoo.png" alt="Shampoo">
+                        <h2>Shampoo Kaisen</h2>
+                        <p class="precio">$8000</p>
+                        <button class="btn-carrito" data-nombre="Shampoo Kaisen" data-precio="8000">Agregar al Carrito</button>
+                    </div>
+                    <!-- Falta la imagen "tinte-para-cabello.png": producto comentado hasta tenerla -->
                 </div>
-                <div class="producto">
-                    <img src="images/products/polvo-de-texturizar.png" alt="Polvo de Texturizar">
-                    <h2>Polvo de Texturizar</h2>
-                    <p class="precio">$6000</p>
-                    <button class="btn-carrito">Agregar al Carrito</button>
-                </div>
-                <div class="producto">
-                    <img src="images/products/crema-leave-in.png" alt="Creme Leave-In">
-                    <h2>Creme Leave-In</h2>
-                    <p class="precio">$7000</p>
-                    <button class="btn-carrito">Agregar al Carrito</button>
-                </div>
-                <div class="producto">
-                    <img src="images/products/sytiling-cream.png" alt="Sytiling Cream">
-                    <h2>Sytiling Cream</h2>
-                    <p class="precio">$8000</p>
-                    <button class="btn-carrito">Agregar al Carrito</button>
-                </div>
-                <div class="producto">
-                    <img src="images/products/shampoo.png" alt="Shampoo">
-                    <h2>Shampoo Kaisen</h2>
-                    <p class="precio">$8000</p>
-                    <button class="btn-carrito">Agregar al Carrito</button>
-                </div>
-                <div class="producto">
-                    <img src="images/products/tinte-para-cabello.png" alt="Tinte para Cabello">
-                    <h2>Tinte para Cabello</h2>
-                    <p class="precio">$10000</p>
-                    <button class="btn-carrito" alt="Agregar al carrito">Agregar al Carrito</button>
-                </div>
-                <!-- Agrega más productos según sea necesario -->
+                <p id="sin-resultados" class="oculto">No se encontraron productos.</p>
             </div>
-        </div>
         </main>
 <footer>
-        <div  class="cont-footer">
-        <img src="../images/logo-kaisenfade.png" alt="Logo de kasin fade">
+        <div class="cont-footer">
+        <img src="images/logo-kaisenfade.png" alt="Logo de kaisen fade">
         <p>&copy; 2024 KAISEN FADE. Todos los derechos reservados.</p>
         <div class="redes">
             <a href="https://www.facebook.com/kaisenfade" target="_blank"><img src="images/icons/facebook.png" alt="Facebook"></a>
@@ -115,6 +109,8 @@
         </div>
         </div>
     </footer>
-    <script src="JS/catalogo.js"></script>
+    <script src="JS/menu.js" defer></script>
+    <script src="JS/buscador.js" defer></script>
+    <script src="JS/catalogo.js" defer></script>
 </body>
 </html>

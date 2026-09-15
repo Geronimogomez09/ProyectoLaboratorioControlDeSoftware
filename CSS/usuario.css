@@ -1,0 +1,92 @@
+@import url("catalogo.css");
+
+.usuario-contenedor {
+    max-width: 500px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.tarjeta-usuario {
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 20px;
+    padding: 35px;
+}
+
+.tarjeta-usuario img {
+    width: 90px;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(31%) saturate(1300%) hue-rotate(190deg) brightness(92%) contrast(95%);
+    margin-bottom: 15px;
+}
+
+.dato-usuario {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.dato-usuario label {
+    display: block;
+    font-family: var(--fuente2);
+    color: var(--marron);
+    font-size: .85rem;
+    margin-bottom: 4px;
+}
+
+.dato-usuario p {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+/* Cuando el campo pasa a ser editable (contentEditable = "true"),
+   le agregamos esta clase para que se note visualmente. */
+.editable {
+    border: 1px dashed var(--dorado) !important;
+    background: rgba(255,255,255,.4);
+}
+
+.acciones-usuario {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.acciones-usuario button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--fuente2);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#btn-editar {
+    background: var(--dorado);
+    color: white;
+}
+
+#btn-guardar {
+    background: rgb(38, 168, 38);
+    color: white;
+}
+
+#btn-cerrar-sesion {
+    background: #b60f0f;
+    color: white;
+}
+
+#sin-sesion {
+    text-align: center;
+    font-family: var(--fuente2);
+    color: var(--marron);
+}
+
+#sin-sesion a {
+    color: #dd1a1a;
+}
+.nav-bar li a{
+    text-decoration: none;
+}

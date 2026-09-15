@@ -1,0 +1,98 @@
+@import url("catalogo.css");
+
+/* La línea de arriba reutiliza TODO el diseño del catálogo (header,
+   footer, colores, fuentes) para no repetir código, y acá abajo
+   solo se agrega lo específico de esta página. */
+
+.carrito-contenedor {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 16px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+
+.item-carrito .item-info h3 {
+    font-family: var(--fuente2);
+    color: #dd1a1a;
+    margin-bottom: 5px;
+}
+
+.item-carrito .item-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-carrito .item-cantidad button {
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 6px;
+    background: var(--dorado);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-quitar {
+    background: none;
+    border: none;
+    color: #b60f0f;
+    font-family: var(--fuente2);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.resumen-carrito {
+    text-align: right;
+    font-family: var(--fuente2);
+    font-size: 1.3rem;
+    color: var(--marron);
+    margin-top: 20px;
+}
+
+.acciones-carrito {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.acciones-carrito button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--fuente2);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#btn-vaciar {
+    background: #b60f0f;
+    color: white;
+}
+#btn-vaciar:hover {
+    background: #7d0a0a;
+}
+
+#carrito-vacio {
+    text-align: center;
+    font-family: var(--fuente2);
+    color: var(--marron);
+    margin: 40px 0;
+}
+.nav-bar li a{
+    text-decoration: none;
+}

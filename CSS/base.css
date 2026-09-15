@@ -1,0 +1,155 @@
+/* ============================================================
+   BASE.CSS
+   Estilos compartidos por TODAS las páginas: menú lateral,
+   footer y buscador. Se incluye después de la hoja propia de
+   cada página (catalogo.css, style.css, etc).
+   ============================================================ */
+
+/* ---------- MENU LATERAL ---------- */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -250px; /* oculto por defecto, fuera de la pantalla */
+    width: 250px;
+    height: 100vh;
+    background-color: #111;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 80px;
+    border-right: 2px solid var(--dorado);
+}
+.menu-lateral.activo {
+    left: 0; /* clase que agrega/quita menu.js */
+}
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+.menu-lateral li {
+    padding: 15px 20px;
+}
+.menu-lateral a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--fuente2);
+    transition: transform 0.1s;
+}
+.menu-lateral a:hover {
+    transform: translateX(1rem);
+    text-decoration-line: underline;
+    color: #c99d3f;
+}
+.menu-lateral button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 1.2rem;
+    color: #dd1a1a;
+    font-family: var(--fuente2);
+    transition: transform 0.5s;
+}
+.menu-lateral button:hover {
+    transform: translateY(-0.3rem);
+}
+
+/* ---------- BUSCADOR (barra de búsqueda del header) ---------- */
+/* Arranca oculta mediante la clase .oculto y se muestra/oculta
+   por JS con classList.toggle() cuando se hace click en la lupa. */
+.buscador {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    background: rgba(0, 0, 0, 0.05);
+}
+.buscador input {
+    margin-top: 80px;
+    width: min(90%, 420px);
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    font-family: var(--fuente2);
+}
+.oculto {
+    display: none;
+}
+
+/* ---------- BADGE DEL CARRITO ---------- */
+/* Numerito que indica cuántos productos hay cargados */
+.icono-carrito-wrap {
+    position: relative;
+    display: inline-block;
+}
+.badge-carrito {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #dd1a1a;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente2);
+}
+
+/* ---------- MENSAJES DE FORMULARIO (login / registro / turnos) ---------- */
+#mensaje-login,
+#mensaje-registro {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+}
+#mensaje-login.ok,
+#mensaje-registro.ok {
+    background: rgba(38, 168, 38, .25);
+    color: #d4ffd4;
+}
+#mensaje-login.error,
+#mensaje-registro.error {
+    background: rgba(214, 27, 27, .25);
+    color: #ffd4d4;
+}
+
+/* ---------- FOOTER (para páginas que usan style.css, que no lo trae) ---------- */
+footer.footer-kaisen {
+    background: rgba(255,255,255,0.1);
+    color: #b60f0f;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: var(--fuente2);
+    margin-top: 40px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+footer.footer-kaisen img {
+    width: 100px;
+}
+footer.footer-kaisen .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+footer.footer-kaisen .redes img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+footer.footer-kaisen .redes img:hover {
+    transform: translateY(-5px);
+}
